@@ -1,19 +1,19 @@
 import 'package:block_sample/models/cart.dart';
 
-class CatService{
+class CartService{
   static List<Cart> cartItems= [];
-  static CatService _singLeton =CatService._internal();
-  factory CatService(){
+  static CartService _singLeton =CartService._internal();
+  factory CartService(){
     return _singLeton;
   }
-  CatService._internal();
+  CartService._internal();
   static void addToCart(Cart item){
     cartItems.add(item);
   }
   static void removeFromCart(Cart item){
     cartItems.remove(item);
   }
-  static List<Cart> getCart(Cart item){
+  static List<Cart> getCart(){
    return cartItems;
   }
 }
